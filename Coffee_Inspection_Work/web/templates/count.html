@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Coffee_bean | website</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="static/dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed" style = "background-image: url(https://lh3.googleusercontent.com/proxy/baZiekoLQxncJ8LdKVc2mAjDCgqvbGWM-ASr_B12C0N9WIQV2IRz1AqX9Af-X-C-FM-B7SXfPSz6B8wtUoNHCv-3_ToO8gGqfslzOQHDCphdYtXKZypgJqsDtaMjs-csuBdcwFsu3dDzpw0Z_Lz5b3r6GptAUhOLLL4aBU-TvPBTHa8QxltXX8G8-Efor8lD-u1KfUqUh8KZTbU75Ipy0rNPQNAH-wLctkSJ1LKg69nIzju-Htro3zFleXAnaWwWxY8XxO8OaLCfiXTGYciOfqinr6OjywynaOvKCUI9sOhoUnN0_ZI8Tw); background-size:cover"  >
+      <!-- Content Header (Page header) -->
+      <div class="content-header" >
+          <p style = 'color:rgb(41, 19, 2); font-size: 60pt; text-align: center;'>Coffee_Detector</p>
+            <br>
+      </div>
+      
+          </div>
+          <div class="row" style="margin-left: 680px;">          
+            <font size = '5'>
+            <table border="5" bordercolor="#000000"     style="margin-top: 10px; background-color:beige;" width=600 height=600>
+              <colgroup>
+                <col width="20%" / >
+                <col width="20%" / >
+                <col width="20%" / >
+                <col width="20%" / >
+              </colgroup>
+              
+               <th style = 'text-align: center;' >Set/종류 </th>
+               <th style = 'text-align: center;'>Normal</th>
+               <th style = 'text-align: center;'>Broken</th>
+               <th style = 'text-align: center;'>Black</th>
+               
+               <tr><!-- 첫번째 줄 시작 -->
+                   <td style = 'text-align: center;'>1</td>
+                   <td style = 'text-align: center;'>{{prediction_for_web.Normal_cnt}}</td>
+                   <td style = 'text-align: center;'>{{prediction_for_web.Broken_cnt}}</td>
+                   <td style = 'text-align: center;'>{{prediction_for_web.Black_cnt}}</td>
+               </tr><!-- 첫번째 줄 끝 -->
+               <tr><!-- 두번째 줄 시작 -->
+                   <td style = 'text-align: center;'>2</td>
+                   <td style = 'text-align: center;'>{{prediction_for_web.Normal_cnt}}</td>
+                   <td style = 'text-align: center;'>{{prediction_for_web.Broken_cnt}}</td>
+                   <td style = 'text-align: center;'>{{prediction_for_web.Black_cnt}}</td>
+               </tr><!-- 두번째 줄 끝 -->
+               <tr><!-- 두번째 줄 시작 -->
+                 <td style = 'text-align: center;'>3</td>
+                 <td style = 'text-align: center;'>{{prediction_for_web.Normal_cnt}}</td>
+                 <td style = 'text-align: center;'>{{prediction_for_web.Broken_cnt}}</td>
+                 <td style = 'text-align: center;'>{{prediction_for_web.Black_cnt}}</td>
+               </tr><!-- 두번째 줄 끝 -->
+               <tr><!-- 두번째 줄 시작 -->
+                 <td style = 'text-align: center;'>Total</td>
+                 <td style = 'text-align: center;'>{{prediction_for_web.Normal_cnt+prediction_for_web.Normal_cnt+prediction_for_web.Normal_cnt}}</td>
+                 <td style = 'text-align: center;'>{{prediction_for_web.Broken_cnt+prediction_for_web.Broken_cnt+prediction_for_web.Broken_cnt}}</td>
+                 <td style = 'text-align: center;'>{{prediction_for_web.Black_cnt+prediction_for_web.Black_cnt+prediction_for_web.Black_cnt}}</td>
+               </tr><!-- 두번째 줄 끝 -->
+            </table>
+            </font>
+          </div>
+
+       </div><!-- /.card-header -->
+
+
+
+
+          
+          <!-- /.row (main row) -->
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <script>
+    $.widget.bridge('uibutton', $.ui.button)
+  </script>
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- ChartJS -->
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <!-- Sparkline -->
+  <script src="plugins/sparklines/sparkline.js"></script>
+  <!-- JQVMap -->
+  <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+  <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+  <!-- jQuery Knob Chart -->
+  <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+  <!-- daterangepicker -->
+  <script src="plugins/moment/moment.min.js"></script>
+  <script src="plugins/daterangepicker/daterangepicker.js"></script>
+  <!-- Tempusdominus Bootstrap 4 -->
+  <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- Summernote -->
+  <script src="plugins/summernote/summernote-bs4.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <script src="dist/js/pages/dashboard.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="dist/js/demo.js"></script>
+</body>
+
+</html>
